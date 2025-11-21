@@ -1,15 +1,9 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
-class Config {
-  MongoInitdbRootUsername: string =
-    process.env.MONGO_INITDB_ROOT_USERNAME || "root";
-  MongoInitdbRootPassword: string =
-    process.env.MONGO_INITDB_ROOT_PASSWORD || "example";
-  hostname: string = process.env.HOST || "localhost";
-  port: number = Number(process.env.PORT) || 3000;
-}
-
-export const loadConfig = (): Config => {
-  return new Config();
+export const config = {
+  DatabaseURL:
+    process.env.DATABASE_URL || "mongodb://user:password@127.0.0.1:27017/test",
+  Hostname: process.env.HOST || "localhost",
+  Port: Number(process.env.PORT) || 3000,
 };

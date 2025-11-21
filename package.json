@@ -2,6 +2,9 @@
   "name": "test",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
@@ -12,6 +15,8 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "graphql": "^16.12.0",
-    "graphql-yoga": "^5.16.2"
+    "graphql-yoga": "^5.16.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.0"
   }
 }
